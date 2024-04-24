@@ -4,11 +4,15 @@ import torch.nn.functional as F
 
 class LogisticRegression(nn.Module):
 
-    def __init__(self, n_features):
-        super(LogisticRegression, self).__init__()
+    def __init__(self, n_features, n_hidden):
+        super().__init__()
         
         self.pipeline = nn.Sequential(
-            nn.Linear(n_features, 1)
+            nn.Linear(n_features, n_hidden),
+            nn.ReLU(),
+            nn.Linear(n_hidden, 1),
+            nn.ReLU(),
+            nn.Sigmoid()
         )
 
     def score(self, X):
@@ -17,4 +21,4 @@ class LogisticRegression(nn.Module):
 
     
     def forward(self, X):
-        return F.sigmoid(self.pipeline(X)) 
+        return self.pipeline(X)
