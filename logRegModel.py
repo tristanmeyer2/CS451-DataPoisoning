@@ -14,11 +14,6 @@ class LogisticRegression(nn.Module):
             nn.ReLU(),
             nn.Sigmoid()
         )
-
-    def score(self, X):
-
-        return self.pipeline(X)
-
     
     def forward(self, X):
         return self.pipeline(X)
