@@ -1,5 +1,5 @@
 # CS451-DataPoisoning
-Collaborators: Oscar Fleet, Tristan Meyer, Lucus Flemming
+Collaborators: Oscar Fleet, Tristan Meyer
 
 # Abstract
 The project focuses on exploring the vulnerability of financial payment fraud detection systems, and machine learning models in general, to data poisoning attacks. Data poisoning is a technique used in adversarial machine learning, wherein an attacker deliberately manipulates a machine learning model’s training data to obtain a preferred outcome.
